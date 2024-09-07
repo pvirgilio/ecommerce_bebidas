@@ -12,7 +12,7 @@ import imGcarrinho from "../../../../public/images/assets/carrinho.svg";
 import { IoMenuOutline } from "react-icons/io5";
 import { SearchIcon } from "./searchIcon";
 import { IoStopwatchOutline } from "react-icons/io5";
-import userSvg from "/images/userIcon.png";
+import userIcon from "../../../../public/images/userIcon.png";
 import { IoSnow } from "react-icons/io5";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 import { FaRegUserCircle } from "react-icons/fa";
@@ -44,7 +44,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMenuNavigation, setIsMenuNavigation] = useState(false);
   const [carrinho, setIsCarrinho] = useState(false);
-  const userImg = perfil?.usuario?.imageProfile || "/images/userIcon.png";
+  const userImg = perfil?.usuario?.imageProfile || userIcon;
   const [img, setImg] = useState();
   const isDesktop =
     typeof window !== "undefined"
@@ -169,7 +169,7 @@ export default function Header() {
                     <User
                       as="button"
                       avatarProps={{
-                        src: img || "/images/userIcon.png",
+                        src: img || userIcon,
                       }}
                       className=""
                       description="Bem vindo(a)!"
@@ -197,7 +197,7 @@ export default function Header() {
                     <User
                       as="button"
                       avatarProps={{
-                        src: "/images/userIcon.png",
+                        src: userIcon,
                       }}
                       className="transition-transform"
                       description="Faça login ou cadastre-se"
@@ -274,7 +274,7 @@ max-lg:left-0 max-lg:flex-col max-lg:z-50 max-lg:h-screendv max-lg:bg-[#F7F7F7] 
                   as="button"
                   avatarProps={{
                     isBordered: true,
-                    src: userImg || "/images/userIcon.png" || "",
+                    src: userImg || userIcon,
                   }}
                   className="transition-transform"
                   description=""
@@ -304,7 +304,7 @@ max-lg:left-0 max-lg:flex-col max-lg:z-50 max-lg:h-screendv max-lg:bg-[#F7F7F7] 
                 <User
                   as="button"
                   avatarProps={{
-                    src: "/images/userIcon.png",
+                    src: userIcon,
                   }}
                   className="transition-transform"
                   description="Faça login ou cadastre-se"
