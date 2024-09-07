@@ -12,7 +12,7 @@ import imGcarrinho from "../../../../public/images/assets/carrinho.svg";
 import { IoMenuOutline } from "react-icons/io5";
 import { SearchIcon } from "./searchIcon";
 import { IoStopwatchOutline } from "react-icons/io5";
-import userSvg from "../../../../public/images/userIcon.png";
+import userSvg from "/images/userIcon.png";
 import { IoSnow } from "react-icons/io5";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 import { FaRegUserCircle } from "react-icons/fa";
@@ -44,7 +44,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMenuNavigation, setIsMenuNavigation] = useState(false);
   const [carrinho, setIsCarrinho] = useState(false);
-  const userImg = perfil?.usuario?.imageProfile || userSvg;
+  const userImg = perfil?.usuario?.imageProfile || "/images/userIcon.png";
   const [img, setImg] = useState();
   const isDesktop =
     typeof window !== "undefined"
@@ -169,7 +169,7 @@ export default function Header() {
                     <User
                       as="button"
                       avatarProps={{
-                        src: img || userSvg,
+                        src: img || "/images/userIcon.png",
                       }}
                       className=""
                       description="Bem vindo(a)!"
@@ -274,7 +274,7 @@ max-lg:left-0 max-lg:flex-col max-lg:z-50 max-lg:h-screendv max-lg:bg-[#F7F7F7] 
                   as="button"
                   avatarProps={{
                     isBordered: true,
-                    src: userImg || userSvg,
+                    src: userImg || "/images/userIcon.png" || "",
                   }}
                   className="transition-transform"
                   description=""

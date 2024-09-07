@@ -9,7 +9,7 @@ import { UserContext } from "../context/UsuarioContext";
 export default function PerfilUserHome() {
   const [loading, setLoading] = useState(true);
   const { perfil } = useContext(UserContext);
-  const image = perfil?.usuario?.imageProfile || userSvg || "";
+  const image = perfil?.usuario?.imageProfile || "/images/userIcon.png" || "";
   const email = perfil?.usuario?.email || "Email indisponível";
   const username = perfil?.usuario?.username || "Usuario não encontrado";
   useEffect(() => {

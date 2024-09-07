@@ -4,7 +4,6 @@ import PerfilUser from "../perfil";
 import { FaUserAlt } from "react-icons/fa";
 import DataUser from "./dataUser";
 import { UserContext } from "../../context/UsuarioContext";
-import userSvg from "public/images/userIcon.png";
 const FormsUser = () => {
   const { FotoUsuario, perfil } = useContext(UserContext);
 
@@ -20,7 +19,7 @@ const FormsUser = () => {
     setUser(perfil?.usuario?.username || "Usuario não encontrado");
     setMail(perfil?.usuario?.email || "Email indisponível");
     setTel(perfil?.usuario?.celular || "Celular não encontrado");
-    setImg(perfil?.usuario?.imageProfile || userSvg);
+    setImg(perfil?.usuario?.imageProfile || "/images/userIcon.png" || "");
     setDate(perfil?.usuario?.nascimento || "Data inválida");
     setCpf(perfil?.usuario?.cpf || "CPF não encontrado");
   }, [perfil]);
