@@ -128,13 +128,7 @@ export default function Header() {
       <header className="relative w-full flex flex-col bg-[#F7F7F7] ">
         <div className="w-full flex items-center h-auto py-2 justify-between mx-auto max-2xl:px-5  xl:max-w-[1416px] 3xl:max-w-[1516px]">
           <Link href="/home">
-            <Image
-              src={Logo2}
-              width={116}
-              height={83}
-              alt="Logo"
-              className="max-lg:max-w-[78px] max-lg:h-[56px]"
-            />
+            <h1 className="text-3xl">LOGO</h1>
           </Link>
           <Input
             label="Search"
