@@ -80,13 +80,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-          <Image
-            className=" md:w-[223px] md:h-[159px]"
-            src={Logo2}
-            width={117}
-            height={83.442}
-            alt="Imagem Logo"
-          />
+          <h1 className="text-3xl">LOGO</h1>
       </div>
     </footer>
   );
